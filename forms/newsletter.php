@@ -13,8 +13,7 @@
   $contact->to = $receiving_email_address;
   $contact->from_name = $_POST['email'];
   $contact->from_email = $_POST['email'];
-  $contact->subject ="New Subscription: " . $_POST['email'];
-
+  $contact->subject ="New Subscription from" . $_POST['emails'];
   $contact->add_message( $_POST['email'], 'Email');
 
   echo $contact->send();

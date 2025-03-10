@@ -15,11 +15,13 @@
   $contact->from_name = $_POST['name'];
   $contact->from_email = $_POST['email'];
   $contact->subject = $_POST['subject'];
+  $contact->number = $_POST['number'];
   $contact->subject = "New Message from" . $_POST['number'];
 
   $contact->add_message( $_POST['name'], 'From');
   $contact->add_message( $_POST['email'], 'Email');
   $contact->add_message( $_POST['message'], 'Message', 10);
-
+  $contact->add_message( $_POST['number'], 'Number');
+  
   echo $contact->send();
 ?>
