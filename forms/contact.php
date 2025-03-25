@@ -22,6 +22,7 @@
   $contact->add_message( $_POST['email'], 'Email');
   $contact->add_message( $_POST['message'], 'Message', 10);
   $contact->add_message( $_POST['number'], 'Number');
+  $contact->add_message( $_POST['address'], 'Address');
   
   echo $contact->send();
 ?>
